@@ -5,6 +5,11 @@
 # generator expressions.
 cmake_minimum_required( VERSION 3.15 )
 
+# === НАШИ НАСТРОЙКИ (ПОЛНОЕ ОТКЛЮЧЕНИЕ СЕТИ И ТЕЛЕМЕТРИИ) ===
+set(audacity_has_networking Off CACHE BOOL "" FORCE)
+set(audacity_has_crashreports Off CACHE BOOL "" FORCE)
+# ============================================================
+
 # If building with GNU compiler, then must be 4.9 or later.
 if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" AND
     CMAKE_CXX_COMPILER_VERSION VERSION_LESS "4.9")
